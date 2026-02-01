@@ -1,0 +1,31 @@
+vpngate - auto connect and disconnect from servers
+==================================================
+
+Prerequistites
+--------------
+g++
+make
+wget
+openvpn
+systemd-resolved (for arch)
+<other distro specific dependencies>
+
+Installation
+------------
+Ensure build prerequistites are installed. Run
+  
+    make
+
+to produce binaries required for the scripts. The build may require root privileges.
+
+Usage
+-----
+Run
+
+    ./connect.sh
+
+as root to connect, and 
+
+    ./disconnect
+
+again, as root, to disconnect.
