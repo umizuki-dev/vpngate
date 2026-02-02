@@ -43,12 +43,7 @@ void trimCSV(const std::string& filename, const CSVData& csv) {
     file << header << '\n';
   }
 
-
-  /* 
-   * Conditions:
-   * 1. Server in Japan
-   * 2. HostName does not start with "public-"
-   */
+  /* conditions: (Japan, hostname not "public-...", speed > 500Mbps) */
   for (const auto& row : csv.rows) {
     if (row.size() > 5 &&
         row[5] == "Japan" &&
